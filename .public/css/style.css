@@ -1,0 +1,58 @@
+.bloc_page img {
+  background-size: cover;
+}
+.bloc_page ul {
+  list-style-type: none;
+}
+.bloc_page a:link {
+  text-decoration: none;
+}
+
+.logo1, .logo2, h1, h2, h3 {
+  font-family: "Shrikhand", cursive;
+}
+
+header {
+  text-align: center;
+  margin-top: 20px;
+  border-bottom: 1px solid #d9d9d9;
+  box-shadow: 3px 3px 3px 3px gainsboro;
+}
+
+.logo1 img {
+  height: 1%;
+  width: 60%;
+  min-width: 140px;
+  max-width: 300px;
+}
+
+.section1 {
+  margin-top: 5px;
+}
+.section1 div {
+  font-size: 2rem;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  width: 40%;
+  max-width: 767px;
+  height: 50px;
+  max-height: 50px;
+  background-color: #F2F2F2;
+}
+.section1 div input {
+  background-color: #F2F2F2;
+  border: none;
+  width: 40%;
+  max-width: 500px;
+  color: black;
+}
+.section1 div ::placeholder {
+  color: black;
+}
+
+.section2 img {
+  width: 25%;
+}
+
+/*# sourceMappingURL=style.css.map */
