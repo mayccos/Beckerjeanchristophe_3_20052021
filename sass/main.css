@@ -1,1 +1,100 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+.bloc_page img {
+  background-size: cover;
+}
+
+.bloc_page ul {
+  list-style-type: none;
+}
+
+.bloc_page a:link {
+  text-decoration: none;
+}
+
+.logo1, .logo2, h1, h2, h3 {
+  font-family: 'Shrikhand', cursive;
+}
+
+header {
+  text-align: center;
+  margin-top: 20px;
+  border-bottom: 1px solid #d9d9d9;
+  -webkit-box-shadow: 2px 2px 2px 2px gainsboro;
+          box-shadow: 2px 2px 2px 2px gainsboro;
+}
+
+.logo1 img {
+  height: 1%;
+  width: 60%;
+  min-width: 140px;
+  max-width: 300px;
+}
+
+.section1 {
+  background-color: #f6f6f6;
+  height: 50%;
+  min-height: 350px;
+  margin-top: 5px;
+}
+
+.section1 div {
+  margin: 40%;
+  font-size: 1.5rem;
+  display: table-cell;
+  height: 50px;
+  vertical-align: middle;
+  background-color: #eaeaea;
+  width: 100%;
+  min-width: 320px;
+}
+
+.section1 div input {
+  background-color: #eaeaea;
+  border: none;
+  color: black;
+  margin-left: 5px;
+}
+
+.section1 div i {
+  margin-left: 50px;
+}
+
+.section1 div ::-webkit-input-placeholder {
+  color: black;
+}
+
+.section1 div :-ms-input-placeholder {
+  color: black;
+}
+
+.section1 div ::-ms-input-placeholder {
+  color: black;
+}
+
+.section1 div ::placeholder {
+  color: black;
+}
+
+.section1 h1, .section1 p {
+  margin-left: 20px;
+}
+
+.section1 h1 {
+  font-size: 2.5rem;
+}
+
+.section1 p, .section1 .btn {
+  font-size: 1.5rem;
+}
+
+.section1 .btn {
+  margin-left: 40%;
+  height: 60px;
+  border-radius: 180px;
+  width: 20%;
+  min-width: 220px;
+}
+
+.section2 img {
+  width: 25%;
+}
+/*# sourceMappingURL=main.css.map */

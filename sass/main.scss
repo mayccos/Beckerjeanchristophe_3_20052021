@@ -1,4 +1,26 @@
+$color1: #9356DC;
+$color2: #FF79DA;
+$color3: #99E2D0;
+$colorbor: rgb(217, 217, 217);
+$colorbacs: rgb(246, 246, 246);
+$colorbacin: rgb(234,234,234);
+$colorfo: rgb(53,53,53);
+@mixin menu {
+    background-color: white;
+    box-shadow: 5px 5px 5px $colorbor;
+    border-radius: 20px;
+}
+@mixin headingborder ($color: $colorbor) {
+    border-bottom: 1px solid $color;
+    box-shadow: 2px 2px 2px 2px $color;
+}
+@mixin taillei {
+    font-size: 1.7rem;
+}
+
 .bloc_page{
+    
+    font-family: 'Roboto', sans-serif;
     img{
         background-size: cover;
     }
@@ -8,16 +30,15 @@
     a:link{
         text-decoration: none;
     }
-    
+    .logo1 , .logo2 , h1 , h2 , h3{
+        font-family: 'Shrikhand', cursive;
+    }
 }
-.logo1 , .logo2 , h1 , h2 , h3{
-    font-family: 'Shrikhand', cursive;
-}
+
 header{
     text-align:center;
     margin-top: 20px;
-    border-bottom: 1px solid rgb(217, 217, 217);
-    box-shadow: 3px 3px 3px 3px gainsboro;
+    @include headingborder;
 }
 .logo1{ 
     img{
@@ -28,32 +49,179 @@ header{
     }
 }
 .section1{
-    margin-top: 5px;
-    div{
-        font-size: 2rem;
-        text-align: center;
+    display: block;
+    text-align: center;
+    background-color: rgb(246, 246, 246);
+    height: 50%;
+    min-height: 350px;
+    margin-top: 4px;
+    .local{
+        font-size: 1.5rem;
         display: table-cell;
-        vertical-align: middle;
-        width: 40%;
-        max-width: 767px;
         height: 50px;
-        max-height: 50px;
-        background-color: #F2F2F2;
+        vertical-align: middle;
+        background-color: rgb(234,234,234);
+        width: 0.50%;
+        min-width: 320px;
         input{
-            background-color: #F2F2F2;
+            background-color: rgb(234,234,234);
             border:none;
-            width: 40%;
-            max-width: 500px;
             color: black;
+            margin-left: 5px;
+        }
+        i{
+            margin-left: 50px;
         }
         ::placeholder{
             color: black;
         }
-        
     }
 }
+h1 , p ,  {
+    margin-left: 20px;
+}
+h1{
+    font-size: 2rem;
+}
+h2{
+    font-size: 1.7rem;
+}
+h3{
+    font-size: 1.2rem;
+}
+p , .btn{
+    font-size: 1.2rem;
+}
+.btn{
+    height: 60px;
+    border: 1px $color1;
+    border-radius: 180px;
+    width: 20%;
+    min-width: 300px;
+    font-size: 1.2rem;
+    margin-top: 1%;
+    background-color: $color1;
+    color: white;
+    &:hover{
+        background-color:  lighten ($color1 ,20%);
+    }    
+}
 .section2{
+    display: flex;
+    flex-direction: column-reverse;
+    i{
+        @include taillei;
+    }
+    h2 , h3 , p{
+        margin-left: 20px;
+    }
+    form{
+        margin-top: 0%;
+        width: 100%;
+        background-color: $colorbacs;
+        height: 30%;
+        min-height: 200px;
+    }
+    ul{
+        display: flex;
+    }
+    li{
+        margin-left: 30px;
+        width: 20%;
+        min-width: 300px;
+        height: 30%;
+        min-height: 170px;
+        @include menu;
+    }
+    
     img{
-        width: 25%;
+        width: 100%;
+        min-width: 300px;
+        height: 200px;
+        background-size: cover;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    h3 , p{
+        color: black;
+    }
+    .palette , .note , .délice{
+        i{
+            margin-left: 20%;
+        };
+    }
+    .franc{
+        i{
+            margin-left: 30%;
+        }
+    }
+    aside{
+        height: 20%;
+        min-height: 200px;
+        width: 100%;
+        min-width: 320px;
+        background-color: white;
+        div{
+            display: flex;
+            margin-left: 20px;
+            width: 90%;
+            height: 100%;
+            .ad1 , .ad2 , .ad3{
+                width: 80%;
+                min-width: 250px;
+                background-color: $colorbacs;
+                border-radius: 20px;
+                height: 50%;
+                min-height: 75px;
+                align-items: center;
+                i{
+                    margin-left: 8%;
+                }
+                label{
+                    margin-left: -2%;
+                    padding-top: 2%;
+                    background-color: $color1;
+                    color: white;
+                    width: 40px;
+                    height: 30px;
+                    border-radius: 180px;
+                    text-align: center;
+                    align-items: center;
+                }
+            }
+            .ad1 , .ad2{
+                i{
+                    color: gray;
+                }
+            }
+            .ad3{
+                i{
+                    color: $color1;
+                }
+            }
+        }
+
+    }
+}
+footer{
+    color: white;
+    padding-top: 1%; 
+    background-color: $colorfo;
+    img{
+        width: 10%;
+        height: 1%;
+        margin-left: 2.5%;
+        filter: invert(100%);
+        
+    }
+    ul{
+        margin-top: 10px;
+        font-size: 1.2rem;
+    }
+    li{
+        margin-top: 1%;
+        a{
+            color: white;
+        }
     }
 }

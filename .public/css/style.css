@@ -1,3 +1,7 @@
+@charset "UTF-8";
+.bloc_page {
+  font-family: "Roboto", sans-serif;
+}
 .bloc_page img {
   background-size: cover;
 }
@@ -7,8 +11,7 @@
 .bloc_page a:link {
   text-decoration: none;
 }
-
-.logo1, .logo2, h1, h2, h3 {
+.bloc_page .logo1, .bloc_page .logo2, .bloc_page h1, .bloc_page h2, .bloc_page h3 {
   font-family: "Shrikhand", cursive;
 }
 
@@ -16,7 +19,7 @@ header {
   text-align: center;
   margin-top: 20px;
   border-bottom: 1px solid #d9d9d9;
-  box-shadow: 3px 3px 3px 3px gainsboro;
+  box-shadow: 2px 2px 2px 2px #d9d9d9;
 }
 
 .logo1 img {
@@ -27,32 +30,180 @@ header {
 }
 
 .section1 {
-  margin-top: 5px;
-}
-.section1 div {
-  font-size: 2rem;
+  display: block;
   text-align: center;
+  background-color: #f6f6f6;
+  height: 50%;
+  min-height: 350px;
+  margin-top: 4px;
+}
+.section1 .local {
+  font-size: 1.5rem;
   display: table-cell;
-  vertical-align: middle;
-  width: 40%;
-  max-width: 767px;
   height: 50px;
-  max-height: 50px;
-  background-color: #F2F2F2;
+  vertical-align: middle;
+  background-color: #eaeaea;
+  width: 0.5%;
+  min-width: 320px;
 }
-.section1 div input {
-  background-color: #F2F2F2;
+.section1 .local input {
+  background-color: #eaeaea;
   border: none;
-  width: 40%;
-  max-width: 500px;
   color: black;
+  margin-left: 5px;
 }
-.section1 div ::placeholder {
+.section1 .local i {
+  margin-left: 50px;
+}
+.section1 .local ::placeholder {
   color: black;
 }
 
+h1, p {
+  margin-left: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p, .btn {
+  font-size: 1.2rem;
+}
+
+.btn {
+  height: 60px;
+  border: 1px #9356DC;
+  border-radius: 180px;
+  width: 20%;
+  min-width: 300px;
+  font-size: 1.2rem;
+  margin-top: 1%;
+  background-color: #9356DC;
+  color: white;
+}
+.btn:hover {
+  background-color: lighten #9356DC, 20%;
+}
+
+.section2 {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.section2 i {
+  font-size: 1.7rem;
+}
+.section2 h2, .section2 h3, .section2 p {
+  margin-left: 20px;
+}
+.section2 form {
+  margin-top: 0%;
+  width: 100%;
+  background-color: #f6f6f6;
+  height: 30%;
+  min-height: 200px;
+}
+.section2 ul {
+  display: flex;
+}
+.section2 li {
+  margin-left: 30px;
+  width: 20%;
+  min-width: 300px;
+  height: 30%;
+  min-height: 170px;
+  background-color: white;
+  box-shadow: 5px 5px 5px #d9d9d9;
+  border-radius: 20px;
+}
 .section2 img {
-  width: 25%;
+  width: 100%;
+  min-width: 300px;
+  height: 200px;
+  background-size: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.section2 h3, .section2 p {
+  color: black;
+}
+.section2 .palette i, .section2 .note i, .section2 .délice i {
+  margin-left: 20%;
+}
+.section2 .franc i {
+  margin-left: 30%;
+}
+.section2 aside {
+  height: 20%;
+  min-height: 200px;
+  width: 100%;
+  min-width: 320px;
+  background-color: white;
+}
+.section2 aside div {
+  display: flex;
+  margin-left: 20px;
+  width: 90%;
+  height: 100%;
+}
+.section2 aside div .ad1, .section2 aside div .ad2, .section2 aside div .ad3 {
+  width: 80%;
+  min-width: 250px;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  height: 50%;
+  min-height: 75px;
+  align-items: center;
+}
+.section2 aside div .ad1 i, .section2 aside div .ad2 i, .section2 aside div .ad3 i {
+  margin-left: 8%;
+}
+.section2 aside div .ad1 label, .section2 aside div .ad2 label, .section2 aside div .ad3 label {
+  margin-left: -2%;
+  padding-top: 2%;
+  background-color: #9356DC;
+  color: white;
+  width: 40px;
+  height: 30px;
+  border-radius: 180px;
+  text-align: center;
+  align-items: center;
+}
+.section2 aside div .ad1 i, .section2 aside div .ad2 i {
+  color: gray;
+}
+.section2 aside div .ad3 i {
+  color: #9356DC;
+}
+
+footer {
+  color: white;
+  padding-top: 1%;
+  background-color: #353535;
+}
+footer img {
+  width: 10%;
+  height: 1%;
+  margin-left: 2.5%;
+  filter: invert(100%);
+}
+footer ul {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+footer li {
+  margin-top: 1%;
+}
+footer li a {
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
