@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @media (min-width: 320px) and (max-width: 480px) {
   h1 {
     font-size: 1.7rem;
@@ -52,78 +51,79 @@
     margin-left: 30px;
   }
 }
-.bloc_page {
-  font-family: "Roboto", sans-serif;
+body, .menu {
+  background-color: white;
 }
-.bloc_page img {
+body img, .menu img {
   background-size: cover;
 }
-.bloc_page ul {
+body ul, .menu ul {
   list-style-type: none;
 }
-.bloc_page a:link {
+body a:link, .menu a:link {
   text-decoration: none;
 }
-.bloc_page .logo1, .bloc_page .logo2, .bloc_page h1, .bloc_page h2, .bloc_page h3 {
-  font-family: "Shrikhand", cursive;
+body h1, body h2, body h3, body h4, .menu h1, .menu h2, .menu h3, .menu h4 {
+  font-family: "Shrikhand";
+  color: black;
+}
+body .sectionB i, body p, .menu .sectionB i, .menu p {
+  font-family: "Roboto", sans-serif;
+  color: black;
 }
 
 header {
+  background-color: #F6F6F6;
   text-align: center;
-  box-shadow: 3px 3px 3px 3px #d9d9d9;
 }
-
-.logo1 {
+header .local {
   padding-top: 20px;
-  border-top: transparent;
-}
-.logo1 img {
-  height: 1%;
-  width: 60%;
-  min-width: 140px;
-  max-width: 300px;
-}
-
-.section1 {
-  display: block;
-  text-align: center;
-  background-color: #f6f6f6;
-  height: 50%;
-  min-height: 350px;
-  margin-top: 7px;
-}
-.section1 .local {
   font-size: 1.5rem;
   display: table-cell;
   height: 50px;
-  vertical-align: middle;
-  background-color: #eaeaea;
+  background-color: #EAEAEA;
   width: 0.5%;
   min-width: 320px;
 }
-.section1 .local input {
-  background-color: #eaeaea;
-  border: none;
-  color: black;
-  margin-left: 5px;
+header .local i, header .local .lieux {
+  display: inline;
 }
-.section1 .local i {
-  margin-left: 50px;
+header .local .lieux {
+  font-size: 1.5rem;
+  margin-left: 20px;
 }
-.section1 .local ::placeholder {
-  color: black;
+header .logo1 {
+  box-shadow: 3px 3px 3px 3px #CECECE;
+  padding-top: 20px;
+  border-top: transparent;
+  background-color: white;
 }
-
-h1 {
-  font-size: 2rem;
+header .logo1 img {
+  height: 1%;
+  width: 60%;
+  min-width: 150px;
+  max-width: 300px;
+}
+header .location {
+  background-color: #F6F6F6;
+  height: 20%;
+  min-height: 250px;
+}
+header .location p {
+  font-size: 1.5rem;
 }
 
 h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  margin: 30px 10px 15px;
   font-size: 1.7rem;
 }
 
-p, .btn, .h3 {
-  font-size: 1.2rem;
+p, .btn, h4 {
+  font-size: 1.5rem;
 }
 
 .btn {
@@ -135,111 +135,96 @@ p, .btn, .h3 {
   margin-top: 1%;
   background: linear-gradient(to bottom, #FF79DA, #9356DC);
   color: white;
-  box-shadow: 3px 3px 3px 3px #d9d9d9;
+  box-shadow: 3px 3px 3px 3px #CECECE;
 }
 .btn:hover {
   opacity: 0.8;
-  box-shadow: 5px 5px 5px 5px #d9d9d9;
+  box-shadow: 5px 5px 5px 5px #CECECE;
 }
 
-.section2 {
-  display: flex;
-  flex-direction: column-reverse;
+.sectionA {
+  width: 100%;
 }
-.section2 i {
+
+.fonctionnement {
+  display: flex;
+  width: 100%;
+}
+.fonctionnement .instructions__content {
+  background-color: #F6F6F6;
+  width: 450px;
+  height: 50px;
+  padding-top: 25px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #CECECE;
+  margin-left: 40px;
+}
+.fonctionnement .instructions .circle, .fonctionnement .instructions .icon, .fonctionnement .instructions .icon2, .fonctionnement .instructions p {
+  display: inline;
+  font-size: 1.5rem;
+}
+.fonctionnement .instructions .icon, .fonctionnement .instructions .icon2, .fonctionnement .instructions p {
+  margin-left: 30px;
+}
+.fonctionnement .instructions .circle {
+  color: white;
+  background-color: #9356DC;
+  border-radius: 50px;
+  margin-left: -1%;
+}
+.fonctionnement .instructions .icon {
+  color: gray;
+}
+.fonctionnement .instructions .icon2 {
+  color: #9356DC;
+}
+
+.sectionB {
+  margin-top: 3%;
+  width: 100%;
+  background-color: #F6F6F6;
+  height: 30%;
+  min-height: 300px;
+}
+.sectionB i {
   font-size: 1.7rem;
 }
-.section2 i:hover {
+.sectionB i:hover {
   color: #9356DC;
   font-weight: linear-radient(to top, #FF79DA, #9356DC);
 }
-.section2 h2, .section2 h3, .section2 p {
+.sectionB h3, .sectionB h4, .sectionB p {
   margin-left: 20px;
 }
-.section2 form {
-  margin-top: 0%;
-  width: 100%;
-  background-color: #f6f6f6;
-  height: 30%;
-  min-height: 200px;
+.sectionB h3 {
+  padding-top: 20px;
+  font-size: 1.7rem;
 }
-.section2 ul {
-  display: flex;
-  justify-content: space-around;
+.sectionB .resto {
+  align-items: flex-start;
 }
-.section2 li {
-  width: 20%;
-  min-width: 300px;
-  height: 30%;
-  min-height: 170px;
+.sectionB .carte_resto {
   background-color: white;
-  box-shadow: 5px 5px 5px #d9d9d9;
-  border-radius: 20px;
+  width: 30%;
 }
-.section2 li .note, .section2 li .franc, .section2 li .délice {
-  margin-left: 30px;
-}
-.section2 li .palette {
-  margin-left: 0px;
-}
-.section2 img {
-  width: 100%;
-  min-width: 300px;
-  height: 200px;
+.sectionB img {
   background-size: cover;
+  height: 175px;
+  width: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.section2 h3, .section2 p {
-  color: black;
-}
-.section2 .palette i, .section2 .note i, .section2 .délice i {
-  margin-left: 20%;
-}
-.section2 .franc i {
-  margin-left: 30%;
-}
-.section2 aside {
-  height: 20%;
-  min-height: 200px;
+.sectionB .content {
   width: 100%;
-  min-width: 320px;
   background-color: white;
 }
-.section2 aside div {
-  display: flex;
-  margin-left: 25px;
-  width: 100%;
-  height: 100%;
+.sectionB .nouveau {
+  background-color: #99E2D0;
+  width: 30%;
+  margin-top: 30px;
 }
-.section2 aside div .ad1, .section2 aside div .ad2, .section2 aside div .ad3 {
-  width: 95%;
-  min-width: 310px;
-  background-color: #f6f6f6;
-  border-radius: 20px;
-  height: 50%;
-  min-height: 75px;
-  align-items: center;
-}
-.section2 aside div .ad1 i, .section2 aside div .ad2 i, .section2 aside div .ad3 i {
-  margin-left: 8%;
-}
-.section2 aside div .ad1 label, .section2 aside div .ad2 label, .section2 aside div .ad3 label {
-  margin-left: -2%;
-  padding-top: 2%;
-  background-color: #9356DC;
-  color: white;
-  width: 40px;
-  height: 30px;
-  border-radius: 50px;
-  text-align: center;
-  align-items: center;
-}
-.section2 aside div .ad1 i, .section2 aside div .ad2 i {
-  color: gray;
-}
-.section2 aside div .ad3 i {
-  color: #9356DC;
+.sectionB .nouveau p {
+  color: #008766;
 }
 
 footer {
@@ -267,6 +252,38 @@ footer li {
 }
 footer li a {
   color: white;
+}
+
+/*ci-dessous css page2*/
+.menu .logo1 ul {
+  text-align: left;
+  font-size: 2rem;
+  margin-top: auto;
+}
+.menu .logo1 a {
+  color: black;
+}
+.menu main {
+  background-color: #F6F6F6;
+}
+.menu main i {
+  margin-left: 25%;
+}
+.menu h1, .menu main i {
+  font-size: 2rem;
+  display: inline;
+}
+.menu .photo img {
+  width: 50%;
+  min-width: 300px;
+  height: 300px;
+}
+.menu .composition {
+  margin-left: 2%;
+  width: 100%;
+  padding-top: 2%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

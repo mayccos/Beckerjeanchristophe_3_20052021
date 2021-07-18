@@ -12,7 +12,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     </head>
-    <body class="bloc_page">
+    <body class="menu">
         <header>
             <div class="logo1">
                 <ul>
@@ -21,31 +21,47 @@
                 <img src="images/logo/ohmyfood.png" alt="logo">
             </div>
         </header>
-        <div>
-            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo">
-        </div>
-        <div>
-            <h1>La palette du goût</h1>
-            <form action="menu">
-                <h2>ENTREES</h2>
-                <p>
-                    <h3>Fricassées d'escargots</h3><p>Au piment d'espelette</p><strong>25€</strong><input type="checkbox" name="entrées" value="Fricassées"><br/>
-                    <h3>Foie gras de canard mi-cuit</h3><p>Et ses copeaux de truffe noire</p><strong>35€</strong><input type="checkbox" name="entrées" value="foie"><br/>
-                    <h3>Oeuf au plat</h3><p>Assaisonné à la truffe sur lit de</p><strong>20€</strong><input type="checkbox" name="entrées" value="oeuf"><br/>
-                </p>
-                <h2>PLATS</h2>
-                <p>
-                    <h3>Filets de boeuf aux herbes</h3><p>Accompagné de sa ribambelle de légu...</p><strong>40€</strong><input type="checkbox" name="entrées" value="filets"><br/>
-                    <h3>Parmentier de queue de boeuf</h3><p>A la truffe noire sur sa purée de panais</p><strong>35€</strong><input type="checkbox" name="entrées" value="queue"><br/>
-                    <h3>Filet de turbot</h3><p>Aux agrumes</p><strong>44€</strong><input type="checkbox" name="entrées" value="turbot"><br/>
-                </p>
-                <h2>DESSERTS</h2>
-                <p>
-                    <h3>Paris-Brest</h3><p>Revisité</p><strong>18€</strong><input type="checkbox" name="dessert" value="paris"><br/>
-                    <h3>Macaron au chocolat d'exception</h3><p>Et glace à la vanille de Madagascar</p><strong>22€</strong><input type="checkbox" name="dessert" value="maca"><br/>
-                    <h3>Mousse au chocolat</h3><p>Au piment d'espelette et à la truffe noire</p><strong>23€</strong><input type="checkbox" name="dessert" value="mousse">                </p>
-            </form>
-        </div>
+        <main>
+            <div class="photo">
+                <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo">
+            </div>
+            <div class="composition">
+                <h1>La palette du goût</h1><i class="far fa-heart"></i>
+                <form action="input_checkbox.htm">
+                    <p>ENTREES</p>
+                    <div class="p2">
+                        <h3>Oeuf au plat</h3>
+                        <p>Assaisonné à la truffe sur lit de caviar<strong>20€</strong></p><input type="checkbox" name="entrées" value="oeuf"></div><br/>
+                    <div class="p2">
+                        <h3>Fricassées d'escargots</h3>
+                        <p>Au piment d'espelette<strong>25€</strong></p><input type="checkbox" name="entrées" value="Fricassées"></div><br/>
+                    <div class="p2">
+                        <h3>Foie gras de canard mi-cuit</h3>
+                        <p>Et ses copeaux de truffe noire<strong>35€</strong></p><input type="checkbox" name="entrées" value="foie"></div><br/>
+                    <p>PLATS</p>
+                    <div class="p2">
+                        <h3>Parmentier de queue de boeuf</h3>
+                        <p>A la truffe noire sur sa purée de panais<strong>35€</strong></p><input type="checkbox" name="entrées" value="queue"></div><br/>
+                    <div class="p2">
+                        <h3>Filets de boeuf aux herbes</h3>
+                        <p>Accompagné de sa ribambelle de légu...<strong>40€</strong></p><input type="checkbox" name="entrées" value="filets"></div><br/>                       
+                    <div class="p2">
+                        <h3>Filet de turbot</h3>
+                        <p>Aux agrumes<strong>44€</strong></p><input type="checkbox" name="entrées" value="turbot"></div><br/>
+                    <p>DESSERTS</p>
+                    <div class="p2">
+                        <h3>Paris-Brest</h3>
+                        <p>Revisité<strong>18€</strong></p><input type="checkbox" name="dessert" value="paris"><br/>
+                    <div class="p2">
+                        <h3>Macaron au chocolat d'exception</h3>
+                        <p>Et glace à la vanille de Madagascar<strong>22€</strong></p><input type="checkbox" name="dessert" value="maca"></div><br/>
+                    <div class="p2">
+                        <h3>Mousse au chocolat</h3>
+                        <p>Au piment d'espelette et à la truffe noire<strong>23€</strong></p><input type="checkbox" name="dessert" value="mousse"></div><br/>                
+                    <button class="btn" form="resto">Commander</button>
+                </form>
+            </div>
+        </main>
         <footer>
             <div>
                 <div class="logo2"><img src="images/logo/ohmyfood.png" alt="photo"></div>
@@ -56,6 +72,6 @@
                     <li class="contact"><a href="#">Contacts</a></li>
                 </ul>
             </div>
-        </footer>
+        </footer>        
     </body>
 </html>
