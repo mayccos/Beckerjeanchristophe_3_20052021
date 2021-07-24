@@ -6,265 +6,53 @@ $colorbor: #CECECE;
 $colorbacs: #F6F6F6;
 $colorbacin: #EAEAEA;
 $colorfo: #353535;
+$color-text: #000000;
+$color-body: #ffffff;
+$colorinact: #808080;
 $font-title: 'Shrikhand';
 $font-content: 'Roboto', sans-serif;
-@mixin instructions {
-    background-color: $colorbacs;
-    width: 450px;
-    height: 50px;
-    padding-top: 25px;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px $colorbor;
-    margin-left: 40px;
-}
-@mixin menu {
-    background-color: white;
-    box-shadow: 5px 5px 5px $colorbor;
-    border-radius: 20px;
-}
-@mixin headingborder  {
-    box-shadow: 3px 3px 3px 3px $colorbor;
-}
-@mixin taillei2 {
-    font-size: 1.7rem;
-}
-@mixin btn_hover {
-    opacity: 0.8;
-    box-shadow: 5px 5px 5px 5px  $colorbor;
-    
-}
-@media (min-width:320px) and (max-width: 480px) {
-    h1{
-        font-size: 1.7rem;
+@keyframes animateHeart {
+    0% {
+       transform: échelle(1);
     }
-    h2{
-        font-size: 1.5rem;
+    40% {
+       transform: échelle(2);
     }
-    h3 , p , .btn , .local{
-        font-size: 1rem;
-    }
-    .section2{
-        form , aside{
-            width: 100%;
-        }
-        form{
-            margin-top: 2%;
-        }   
-        ul , div{
-            flex-direction: column;
-            
-        }
-        li{
-            width: 100%;
-            min-width: 320px;
-            margin-left: -25px;
-            margin-top: 20px;
-            i{
-                margin-left: -50px
-            }
-            
-        }
-        .ad1 , .ad2 , .ad3{
-            width: 90%;
-            min-width: 320px;
-            margin-left: 5px;
-            display:table-cell;
-            align-items: center;
-            margin-top: 20px;
-            font-size: 0.9rem;
-            p{
-                font-size: 0.9rem;
-                margin-left: 100px;
-            }
-            label{
-                margin-left: 2px;
-                height: 30px;
-                width: 30px;
-
-            }
-            i{
-                margin-left: 30px;
-            }
-        }
+    100% {
+       transform: échelle(1);
     }
 }
-body, .menu{
-    
-    background-color: white;
-    img{
-        background-size: cover;
+@keyframes apparition-menu {
+    from{
+        opacity: 0;
     }
-    ul{
-        list-style-type: none;
-    }
-    a:link{
-        text-decoration: none;
-    }
-    h1 , h2 , h3 , h4{
-        font-family: $font-title;
-        color: black;
-    }
-    .sectionB i , p{
-        font-family: $font-content;
-        color: black;
+    to{
+        opacity: 1;
     }
 }
-
-header{
-    background-color: $colorbacs;
-    text-align:center;
-    .local{
-        padding-top: 20px;
-        font-size: 1.5rem;
-        display: table-cell;
-        height: 50px;
-        background-color: $colorbacin;
-        width: 0.50%;
-        min-width: 320px;
-        i , .lieux{
-            display: inline;
-        }
-        .lieux{
-            font-size: 1.5rem;
-            margin-left: 20px
-        }
+@keyframes confirmation {
+    from{
+        opacity: 0;
+        margin-left: 95%;
     }
-    .logo1{
-        @include headingborder;
-        padding-top: 20px;
-        border-top: transparent; 
-        background-color: white;
-        img{
-            height: 1%;
-            width: 60%;
-            min-width: 150px;
-            max-width: 300px;
-        }
-    }
-    .location{
-        background-color: $colorbacs;
-        height: 20%;
-        min-height: 250px;
-        p{
-            font-size: 1.5rem;
-        }
-        
+    to{
+        opacity: 1;
+        margin-left: 81%;
+        transform: rotate(360deg);
     }
 }
-h2{
-    font-size: 2rem;
-}
-h3{
-    margin: 30px 10px 15px;
-    font-size: 1.7rem;
-    
-}
-p , .btn , h4{
-    font-size: 1.5rem;
-}
-.btn{
-    height: 60px;
-    border: 1px $color1;
-    border-radius: 180px;
-    width: 20%;
-    min-width: 300px;
-    margin-top: 1%;
-    background: linear-gradient(to bottom,$color2,$color1);
-    color: white;
-    @include headingborder;
-    &:hover{
-        @include btn_hover;
-    }    
-}
-
-.sectionA{
-    width: 100%;
-}
-.fonctionnement{
-    display: flex;
-    width: 100%;
-    .instructions{
-        &__content{
-           @include instructions; 
-        }
-        .circle , .icon , .icon2 , p{
-            display: inline;
-            font-size: 1.5rem;
-        }
-        .icon , .icon2 , p{
-            margin-left: 30px;
-        }
-        .circle{
-            color: white;
-            background-color: $color1;
-            border-radius: 50px;
-            
-            margin-left: -1%;
-        }
-        .icon{
-            color: gray;
-        }
-        .icon2{
-            color: $color1;
-        }
-        
+@keyframes price-deplacement {
+    from{
+        margin-right: 20px;
+    }
+    to{
+        margin-left: 60px;
     }
 }
-.sectionB{
-    margin-top: 3%;
-    width: 100%;
-    background-color: $colorbacs;
-    height: 30%;
-    min-height: 300px;
-    i{
-        @include taillei2;
-        &:hover{
-            color: $color1;
-            font-weight: linear-radient(to top,$color2,$color1);
-        }
-    }
-    h3 , h4 , p{
-        margin-left: 20px;
-    }
-    h3{
-        padding-top: 20px;
-        font-size: 1.7rem;
-    }
-    .resto{
-        align-items: flex-start;
-    }
-    .carte_resto{
-        background-color: white;
-        width: 30%;
-        
-        
-    }
-    img{
-        background-size: cover;
-        height: 175px;
-        width: 100%;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        
-    }
-    .content{
-        width: 100%;
-        background-color: white;
-
-    }
-    .nouveau{
-        background-color: $color3;
-        width: 30%;
-        margin-top: 30px;
-        p{
-            color: $colorneo;
-        }
-    }
-}
-footer{
+@mixin footer {
     height: 200px;
     margin-top: 5%;
-    color: white;
+    color: $color-body;
     padding-top: 1%; 
     background-color: $colorfo;
     img{
@@ -282,46 +70,400 @@ footer{
     }
     li{
         margin-top: 1%;
+        
         a{
-            color: white;
+            color: $color-body;
         }
     }
-}    
+}
+@mixin menu {
+    background-color: $color-body;
+    box-shadow: 3px 3px 3px 3px $colorbor;
+    border-radius: 20px;
+}
+@mixin headingborder  {
+    box-shadow: 3px 3px 3px 3px $colorbor;
+}
+@mixin i-animate {
+    cursor: pointer;
+        fill: none;
+        transition: .6s;
+        @include taillei2;
+        &:hover{
+            animation:  animateHeart .6s;
+            @include i-hover;
+        }
+}
+@mixin taillei2 {
+    font-size: 1.7rem;
+}
+@mixin btn_hover {
+    opacity: 0.8;
+    box-shadow: 5px 5px 5px 5px  $colorbor;
+}
+@mixin btn {
+    height: 60px;
+    border: 1px $color1;
+    border-radius: 50px;
+    width: 20%;
+    min-width: 300px;
+    margin-top: 1%;
+    background: linear-gradient(to bottom,$color2,$color1);
+    color: white;
+}
+@mixin i-hover {
+    color: $color1;
+    font-weight: bolder;
+}
+@keyframes loader {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.bloc_page , .menu , .menu2{
+    background-color: $colorbacs;
+    font-family: 'Roboto', sans-serif;
+    img{
+        background-size: cover;
+    }
+    ul{
+        list-style-type: none;
+    }
+    a:link{
+        text-decoration: none;
+    }
+    .logo1 , .logo2 , h1 , h2 , h3{
+        font-family: 'Shrikhand';
+    }
+
+}
+header{
+    text-align:center;
+    @include headingborder;
+    background-color: $color-body;
+}
+.logo1{
+    padding-top: 20px;
+    border-top: transparent; 
+    img{
+    height: 1%;
+    width: 60%;
+    min-width: 140px;
+    max-width: 300px;
+    }
+}
+.section1{
+    display: block;
+    text-align: center;
+    background-color: $colorbacs;
+    height: 50%;
+    min-height: 350px;
+    margin-top: 7px;
+    .local{
+        font-size: 1.5rem;
+        display: table-cell;
+        height: 50px;
+        vertical-align: middle;
+        background-color: $colorbacin;
+        width: 0.50%;
+        min-width: 320px;
+        p , i{
+            display: inline;
+        }
+        p{
+            margin-left: 20px;
+        }
+    }
+}
+h1{
+    font-size: 2rem;
+}
+h2{
+    font-size: 1.7rem;
+}
+p , .btn , .h3{
+    font-size: 1.2rem;
+}
+.btn{
+    @include btn;
+    @include headingborder;
+    &:hover{
+        @include btn_hover;
+    }    
+}
+.section2{
+    display: flex;
+    flex-direction: column-reverse;
+    i{
+       @include i-animate; 
+    }
+    h2 , h3 , p{
+        margin-left: 20px;
+    }
+    form{
+        margin-top: 0%;
+        width: 100%;
+        background-color: $colorbacs;
+        height: 30%;
+        min-height: 300px;
+
+    }
+    ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    li{     
+        width: 20%;
+        min-width: 300px;
+        height: 30%;
+        min-height: 170px;
+        @include menu;
+        .note , .franc , .délice{
+            margin-left: 30px;
+        }
+        .palette{
+            margin-left: 0px;
+        }
+    }
+    .neo{
+        position: absolute;
+        color: $colorneo;
+        width:90px;
+        background-color: $color3;
+        text-align: center;
+        height: 20px;
+        margin-left: 10%;
+    }
+    img{
+        
+        width: 100%;
+        min-width: 300px;
+        height: 200px;
+        background-size: cover;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    h3 , p{
+        color: $color-text;
+    }
+    
+    .palette , .note , .délice{
+        i{
+            margin-left: 20%;
+        }
+    }
+    .franc{
+        i{
+            margin-left: 30%;
+        }
+    }
+    aside{
+        height: 20%;
+        min-height: 200px;
+        width: 100%;
+        min-width: 320px;
+        background-color: $color-body;
+        div{
+            display: flex;
+            margin-left: 25px;
+            width: 100%;
+            height: 100%;
+            .ad1 , .ad2 , .ad3{
+                width: 30%;
+                min-width: 310px;
+                background-color: $colorbacs;
+                border-radius: 20px;
+                height: 50%;
+                min-height: 75px;
+                align-items: center;
+                i{
+                    margin-left: 8%;
+                }
+                label{
+                    margin-left: -2%;
+                    padding-top: 2%;
+                    background-color: $color1;
+                    color: white;
+                    width: 40px;
+                    height: 30px;
+                    border-radius: 50px;
+                    text-align: center;
+                    align-items: center;
+                }
+            }
+            .ad1{
+                margin-left: 0%;
+            }
+            .ad1 , .ad2{
+                i{
+                    color: $colorinact;
+                }
+            }
+            .ad3{
+                i{
+                    color: $color1;
+                }
+            }
+        }
+    }
+}
+footer{
+   @include footer; 
+}
 /*ci-dessous css page2*/
-.menu{
-    .logo1{
-        ul{
-            text-align: left;
-            font-size: 2rem;
-            margin-top: auto;
+.menu , .menu2{
+    height: auto;
+    background-color: $colorbacs;
+    header{
+        padding-top: 10px;
+        font-size: 2.5rem;
+        background-color: $color-body;
+        i{
+            color: $color-text;
         }
-        a{
-             color: black;
+        img{
+            margin-left: 200%;
+            height: 50px;
+            width: 100%;
         }
+    }
+    .logo1 , .retour{
+        display: table-cell;
+        justify-content: center;
+    }
+    .retour i{
+        margin-left: 20px;
+        padding-top: -2%;
     }
     main{
-        
         background-color: $colorbacs;
+        i{
+            padding-left: 20%;
+        }
     }
-    main i{
-        margin-left: 25%;
+    h1{
+        margin-left: 35%;
     }
     h1 , main i{
-        font-size: 2rem;
+        font-size: 2.5rem;
         display: inline;
+        margin-top: 2%;
+        text-align: center;
+    }
+    
+    .order-btn{
+        margin-top: 100px;
+        p{ 
+            margin-top: 30px;
+            margin-left: 40%;
+            padding-top: 30px;
+            font-size: 1.7rem;
+            text-align: center;
+            @include headingborder;
+            @include btn;
+            &:hover{
+                @include btn_hover;
+            }
+        }
+    }
+    .title{
+        i{
+           @include i-animate;
+        }
+    }
+    h3  , .menu-contenu i{
+        font-size: 1.3rem;
+        
+    }
+    p , .menu-contenu , h3{
+        margin-left: 20px;
+    }
+    p , .menu-contenu__price{
+        font-size: 1.2rem;
     }
     .photo{
         img{
-        width: 50%;
+        width: 100%;
         min-width: 300px;
-        height: 300px;
+        height: 400px;
         }
     }
     .composition{
-        margin-left: 2%;
-        width: 100%;
+        position: relative;
+        margin-top: -3%;
         padding-top: 2%;
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
+        background-color: $colorbacs;
+    }
+    table{
+        border-collapse: separate;
+        border-spacing: 30px 30px;
+    }
+    
+    .typeplat{
+        font-weight: 300;
+        width: 50px;
+        font-size: 1.5rem;
+        border-bottom: 2px solid $color3;
+    }
+    .entrées , .plats , .dessert{
+        animation: apparition-menu 3s;
+        opacity: 0;
+        animation-fill-mode: forwards;
+        
+    }
+    .plats{
+        animation-delay: 2s;
+    }
+    .dessert{
+        animation-delay: 4s;
+    }
+    .menu-contenu{
+        cursor: pointer;
+        @include menu;
+        width: 480px;
+        height: 80px;
+        &__title{
+           margin-top: -85px;
+
+        }
+        &__description{
+            margin-top: -25px;
+        }
+        &__price{
+            text-align: right;
+            margin-right: 20px;
+            padding-top: -10px;
+            position: relative;
+            font-weight: bold;
+        }
+        &__check-icon{
+            margin-top: -5px;
+            transform: rotate(180deg);
+            width: 80px;
+            height: 60px;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+            background-color: $color3;
+            padding-left: 15px;
+            padding-top: 40px;
+            margin-left: 81%;
+            color: $color-body;
+            opacity: 0;
+            transition: 1s;
+            &:hover{
+                animation: confirmation 1s;
+                animation-fill-mode: forwards; 
+                ~ .menu-contenu__price{
+                    margin-right: 95px;
+                }
+                ~ .menu-contenu__description , ~ .menu-contenu__title{
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    width: 300px;
+                }
+            }
+        }
     }
 }
