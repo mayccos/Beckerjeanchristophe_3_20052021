@@ -1,0 +1,51 @@
+.section3{
+    padding: 10px 0px 5px 0px;
+    background-color: $colorbacs;
+    i{
+        @include i-animate; 
+        color: $color-text;
+    }
+    h2{
+        margin-left: 20px;
+    }
+    .choix-resto{
+        background-color: $colorbacs;
+        padding-bottom: 30px;
+        .carte-resto{    
+            overflow: hidden;
+            position: relative;
+            margin: 10px;
+            @include menu;
+            img{
+                object-fit: cover;
+                width: 100%;
+                height: 200px;
+            }
+            .contenu{
+                align-items: center;
+                display: flex;
+                flex-wrap: wrap;
+                padding: 5px;
+            }
+            .carte-contenu{
+                flex: 1;
+                margin: 5px 0px 5px 10px;
+                width: 150px;
+                h3{
+                    margin: 0;
+                }
+            }
+            .neo{
+                position: absolute;
+                right: 10px;
+                background-color: $color3;
+                font-size: 1rem;
+                top: 10px;
+                p{
+                    margin: 5px 10px 5px 10px;
+                    color: $colorneo;
+                }
+            }
+        }
+    }
+}

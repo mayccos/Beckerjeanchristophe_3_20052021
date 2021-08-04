@@ -1,0 +1,26 @@
+/*ci-dessous css page des menus*/
+.header-title {
+    background-color: $color-body;
+    align-items: center;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    
+    img {
+      height: 70px;
+      width: 200px;
+    }
+  
+    .back-home {
+      left: 15px;
+      position: absolute;
+      top: 30px;
+      font-size: 2rem;
+    }
+}
+.photo-menu{
+    margin-bottom: -30px;
+    max-height: 300px;
+    object-fit: cover;
+    width: 100%;
+}

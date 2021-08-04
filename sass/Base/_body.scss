@@ -1,0 +1,15 @@
+body{
+    background: white;
+    font-family: $font-content;
+    h1 , h2{
+        font-family: $font-title;
+    }
+    
+    ul{
+        list-style-type: none;
+    }
+    a {
+      color: black;
+      text-decoration: none;
+    }
+}  

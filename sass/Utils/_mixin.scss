@@ -1,0 +1,43 @@
+
+@mixin menu {
+    background-color: $color-body;
+    box-shadow: 3px 3px 3px 3px $colorbor;
+    border-radius: 20px;
+}
+@mixin headingborder  {
+    box-shadow: 3px 3px 3px 3px $colorbor;
+}
+@mixin i-animate {
+    cursor: pointer;
+        fill: none;
+        transition: .6s;
+        @include taillei2;
+        &:hover{
+            animation:  animateHeart .6s;
+            @include i-hover;
+        }
+}
+@mixin taillei2 {
+    font-size: 1.7rem;
+}
+@mixin btn_hover {
+    opacity: 0.8;
+    box-shadow: 8px 8px 8px 8px  $colorbor;
+}
+@mixin btn {
+    height: 50px;
+    border: 1px $color1;
+    border-radius: 50px;
+    min-width: 300px;
+    margin-top: 1%;
+    background: linear-gradient(to bottom,$color2,$color1);
+    color: white;
+}
+@mixin i-hover {
+    color: $color1;
+    font-weight: bolder;
+}
+@mixin table {
+    border-collapse: separate;
+    border-spacing: 30px 30px;
+}

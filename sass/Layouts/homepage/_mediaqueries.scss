@@ -1,0 +1,33 @@
+/*adaptation pour les différents écrans page accueil*/
+@media screen and (min-width: 1024px) {
+    .section3{
+        padding: 10px 50px;
+    }    
+}
+@media screen and (min-width: 600px) {
+    .section3{
+        padding: 10px 20px;
+    }
+    
+}
+@media screen and(max-width: 600px) {
+    .ad1 , .ad2 , .ad3{
+        width: 98%;
+    }
+}
+@media (max-width: 1033px){
+    .ad1 , .ad2 , .ad3{
+        display: block;
+        flex-direction: column;
+        width: 70%;
+    }
+    .ad2 , .ad3{
+        margin-top: 30px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .choix-resto{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+}

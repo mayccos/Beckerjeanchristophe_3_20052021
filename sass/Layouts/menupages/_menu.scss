@@ -1,0 +1,61 @@
+.menu{
+    background-color: $colorbacs;
+}
+.menu-btn{
+    display: flex;
+    justify-content: center;
+    p{ 
+        width: 20%;
+        padding-top: 20px;
+        font-size: 1.7rem;
+        text-align: center;
+        @include headingborder;
+        @include btn;
+        &:hover{
+            @include btn_hover;
+        }
+    }
+}
+
+.menu-header {
+    align-items: center;
+    display: flex;
+    font-weight: normal;
+    justify-content: space-between;
+    padding: 0 20px;
+    h2{
+        font-family: $font-title;
+        font-size: 2.5rem;
+    }
+    i{
+        @include i-animate;
+    }
+}
+.sections-restaurants-menu {
+    background-color: $colorbacs;
+    border-radius: 30px 30px 0 0;
+    position: relative;
+}
+.menus {
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0px 10px;
+
+    &__title {
+        font-size: 1.7rem; 
+        font-family: $font-content;
+        font-weight: 300;
+        padding-bottom: 6px;
+        position: relative;
+        text-transform: uppercase;
+        &::after {
+        background-color: $color3;
+        bottom: 0;
+        content: "";
+        height: 4px;
+        left: 0;
+        position: absolute;
+        width: 30px;
+        }
+    }
+}

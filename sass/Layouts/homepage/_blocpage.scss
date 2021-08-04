@@ -1,0 +1,33 @@
+/*css page accueil restaurant*/ 
+.bloc_page{
+    header , .section1 , .section2 , .section3 , footer{
+        animation: apparition-page 2s;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.7rem;
+    }
+    p , .btn , .h3{
+        font-size: 1.2rem;
+    }
+    background-color: $colorbacs;
+    
+    
+    header{
+        text-align:center;
+        @include headingborder;
+        background-color: $color-body;
+    }
+}
+.logo1{
+    padding-top: 20px;
+    border-top: transparent; 
+    img{
+    height: 1%;
+    width: 60%;
+    min-width: 140px;
+    max-width: 300px;
+    }
+}

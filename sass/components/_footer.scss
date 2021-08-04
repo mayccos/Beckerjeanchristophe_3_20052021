@@ -1,0 +1,28 @@
+/*footer commun à toutes les pages*/
+footer{
+    height: 200px;
+    margin-top: 5%;
+    color: $color-body;
+    padding-top: 1%; 
+    background-color: $colorfo;
+    img{
+        width: 10%;
+        min-width: 100px;
+        height: 1%;
+        min-height: 20px;
+        margin-left: 20px;
+        filter: invert(100%);
+    }
+    ul{
+        margin-left: -20px;
+        margin-top: 10px;
+        font-size: 1.2rem;
+    }
+    li{
+        margin-top: 1%;
+        
+        a{
+            color: $color-body;
+        }
+    }
+}
