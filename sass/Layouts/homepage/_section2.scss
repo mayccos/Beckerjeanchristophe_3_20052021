@@ -1,57 +1,40 @@
 .section2{
-    padding-top: 20px;
-    height: 20%;
-    min-height: 200px;
-    width: 100%;
-    background-color: $color-body;
     h2{
-        margin-left: 20px
+        margin-left: 20px;
     }
-    table{
-        @include table;
-        width: 100%;
-        height: 100%;
-    }
-}
-.ad1 , .ad2 , .ad3{
-    font-size: 1.2rem;
-    width: 30%;
-    min-width: 300px;
-    background-color: $colorbacs;
-    border-radius: 20px;
-    height: 50%;
-    min-height: 75px;
-    @include headingborder;
-    label , i , p{
-        display: inline-block;
-        margin-left: 30px;
-    }
-    label{
-        margin-top: 15px;
-        margin-left: -20px;
-        padding-top: 10px;
-        background-color: $color1;
-        color: white;
-        width: 40px;
-        height: 30px;
-        border-radius: 50%;
-        text-align: center;
-        align-items: center;
-    }
-    i{
-        margin-top: 22px;
-    }
-    p{
-        margin-top: 22px;
-    }
-}
-.ad1 , .ad2{
-    i{
-        color: $colorinact;
-    }
-}
-.ad3{
-    i{
-        color: $color1;
+    background-color: $color-body;
+    .fonctionnalities{
+        display: grid;
+        .fonctionnalities-card{
+            max-width: 100%;
+            @include headingborder;
+            background-color: $colorbacs;
+            font-size: 1.2rem;
+            border-radius: 20px;
+            margin: 20px 20px;
+            &__content{
+               display: flex;
+               justify-content: flex-start;
+               flex-direction: row;
+               align-items: center;
+               height: 70px;
+            }
+            .number-circle{
+                color: $color-body;
+                border-radius: 50%;
+                background-color: $color1;
+                margin: 0px 10px 0px -11px;
+                padding: 5px 8px;
+                font-size: 15px;
+            }
+            .miniicon , .miniicon2{
+                color: $colorinact;
+                width: 50px;
+                text-align: center;
+            }
+            .miniicon2{
+                color: $color1;
+            }
+        }
     }
 }

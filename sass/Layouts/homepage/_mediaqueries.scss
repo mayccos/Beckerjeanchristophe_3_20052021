@@ -10,24 +10,15 @@
     }
     
 }
-@media screen and(max-width: 600px) {
-    .ad1 , .ad2 , .ad3{
-        width: 98%;
-    }
-}
-@media (max-width: 1033px){
-    .ad1 , .ad2 , .ad3{
-        display: block;
-        flex-direction: column;
-        width: 70%;
-    }
-    .ad2 , .ad3{
-        margin-top: 30px;
-    }
-}
+
 @media screen and (min-width: 992px) {
     .choix-resto{
         display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media screen and (min-width: 768px) {
+    .fonctionnalities{
         grid-template-columns: repeat(3,1fr);
     }
 }
