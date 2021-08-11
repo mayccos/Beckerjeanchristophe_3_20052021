@@ -1,13 +1,13 @@
 @charset "UTF-8";
 @keyframes animateHeart {
   0% {
-    transform: échelle(1);
+    transform: scale(1);
   }
   40% {
-    transform: échelle(2);
+    transform: scale(2);
   }
   100% {
-    transform: échelle(1);
+    transform: scale(1);
   }
 }
 @keyframes apparition-menu {
